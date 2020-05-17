@@ -1,0 +1,4 @@
+class Message < ApplicationRecord
+  belongs_to :user, dependent: :destroy
+  validates :body, presence: true, length: { minimum: 1, maximum: 256 }
+end
